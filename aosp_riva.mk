@@ -25,6 +25,9 @@ $(call inherit-product, vendor/aosp/common.mk)
 # Inherit from riva device
 $(call inherit-product, device/xiaomi/riva/device.mk)
 
+# Include Bootanimation configuration
+TARGET_BOOT_ANIMATION_RES := 720
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := riva
 PRODUCT_MANUFACTURER := Xiaomi
