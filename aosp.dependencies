@@ -8,7 +8,9 @@
    "target_path": "kernel/xiaomi/msm8917"
  },
  {
-   "repository": "android_packages_resources_devicesettings",
+   "remote":      "los",
+   "repository":  "android_packages_resources_devicesettings",
    "target_path": "packages/resources/devicesettings"
+   "branch":      "lineage-15.1"
  }
 ]
