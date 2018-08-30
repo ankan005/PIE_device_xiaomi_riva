@@ -1,11 +1,19 @@
 #
+<<<<<<< HEAD
 # Copyright (C) 2017 The LineageOS Project
+=======
+# Copyright (C) 2018 The LineageOS Project
+>>>>>>> parent of ca913c2... new
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
+<<<<<<< HEAD
 #      http://www.apache.org/licenses/LICENSE-2.0
+=======
+# http://www.apache.org/licenses/LICENSE-2.0
+>>>>>>> parent of ca913c2... new
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,6 +22,7 @@
 # limitations under the License.
 #
 
+<<<<<<< HEAD
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 $(call inherit-product, vendor/xiaomi/rolex/rolex-vendor.mk)
@@ -488,3 +497,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/lens/nexus.xml:system/etc/sysconfig/nexus.xml \
     $(LOCAL_PATH)/camera/lens/pixel_2017.xml:system/etc/sysconfig/pixel_2017.xml \
     $(LOCAL_PATH)/camera/lens/pixel_2017_exclusive.xml:system/etc/sysconfig/pixel_2017_exclusive.xml
+=======
+DEVICE_PATH := $(LOCAL_PATH)
+
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay
+#    $(DEVICE_PATH)/overlay-lineage
+
+# Include device-specific product fragments
+include $(DEVICE_PATH)/product/*.mk
+
+# Inherit proprietary files
+$(call inherit-product-if-exists, vendor/xiaomi/riva/riva-vendor.mk)
+>>>>>>> parent of ca913c2... new
